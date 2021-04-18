@@ -1,0 +1,685 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	招商银行 -- 外汇实时汇率
+</title>
+    <!-- meta -->
+    <meta name="keywords" content='外汇,外汇投资,外汇实时汇率' />
+    <meta name="description" content='您可通过招商银行外汇随时查看外汇实时汇率,进行自助结售汇交易.' /> 
+    <link href="/Styles/common.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="/Scripts/common.js" type="text/javascript"></script>
+    <script src="http://site.cmbchina.com/scripts/CmbFuncs.js" type="text/javascript"></script>
+    <script src="http://site.cmbchina.com/scripts/CommonFuncs.js" type="text/javascript"></script>
+    
+    <link href="/Styles/fx.css" rel="stylesheet" type="text/css" />
+    <meta name="mobile-agent" content="format=html5;url=http://m.cmbchina.com/Rate/FxRealrate.aspx">
+</head>
+<body>
+<DIV id=header>
+<UL>
+<LI class=first><A href="http://www.cmbchina.com/" target=_blank>一网通主页</A> </LI>
+<LI class=vline></LI>
+<LI><A href="http://fx.cmbchina.com/" target=_blank>外汇</A> </LI>
+<LI class=vline></LI>
+<LI><A href="http://gold.cmbchina.com/" target=_blank>黄金</A> </LI>
+<LI class=vline></LI>
+<LI><A href="http://fund.cmbchina.com/" target=_blank>基金</A> </LI>
+<LI class=vline></LI>
+<LI><A href="http://www.cmbchina.com/cfweb/Personal/Default.aspx" target=_blank>理财产品</A> </LI>
+<LI class=vline></LI>
+<LI><A href="http://cmbchina.cignacmb.com/" target=_blank>保险</A> </LI>
+<LI>本网站支持IPv6 </LI>
+<LI style="WIDTH: 325px"></LI>
+<LI class=liright><A href="http://link.cmbchina.com/onlineservice/onlineservice.ashx" target=_blank>在线客服</A> </LI>
+<LI class=vline></LI>
+<LI class=liright><A href="http://www.cmbchina.com/About/SiteMap.aspx" target=_blank>网站导航</A> </LI></UL></DIV>
+<STYLE type=text/css>
+#header { background-image: url(http://www.cmbchina.com/images/main_top_bg.jpg); background-repeat: repeat-x; height: 31px; width: 100%; overflow: hidden; margin: 0 auto; }
+#header ul { list-style-type: none; margin: 0 auto; width: 922px; text-align: center; overflow: hidden; }
+#header li { margin: 0px 2px 0px 5px; float: left; overflow: hidden; display: inline; height: 31px; line-height: 31px; }
+#header li.liright{ margin: 0 2px; float: left; overflow: hidden; display: inline; height: 31px; }
+#header li.first { margin-left: 0; }
+#header li.last { margin-right: 0; }
+#header li.vline { background-image: url(http://fx.cmbchina.com/Images/top_vline.jpg); background-repeat: no-repeat; width: 4px; overflow: hidden; display: block; float: left; }
+#header a { font-family: 宋体, Arial, Verdana, Helvetica, Sans-Serifs; display: block; float: left; line-height: 31px; overflow: hidden; }
+#header a:link { color: #000000; text-decoration: none; }
+#header a:visited { color: #000000; text-decoration: none; }
+#header a:hover { color: #FF0000; text-decoration: none; }
+#header li.dd { margin: 0 0; background-image: url(../Images/top_dd.jpg); background-repeat: no-repeat; height: 31px; width: 10px; overflow: hidden; display: block; float: left; }
+</STYLE>
+
+
+<div id="logobox">
+	<a class="logo" href="http://www.cmbchina.com" target="_blank"></a>
+	<div class="mainsearch">
+		<input id="keyword" type="text" value="请输入关键字. . ." onfocus="this.style.color='#000000'; if (this.value == '请输入关键字. . .' ) {this.value='';}"
+			onblur="this.style.color = '#666666';if ( this.value =='' ){this.value = '请输入关键字. . .';}" />
+		<input id="btnSearch" name="btnSearch" type="button" onclick="javascript:webSearch();" />
+	</div>
+</div>
+<div id="menubox">
+	<span class="leftspace">&nbsp;</span> <a cname="导航菜单" oname="外汇首页" otype="文字链接" href="/" >外汇首页</a> <span class="vl"></span><a cname="导航菜单" oname="外汇行情" otype="文字链接" href="/Hq/" class="cur"
+			>外汇行情</a> <span class="vl"></span><a cname="导航菜单" oname="业务产品" otype="文字链接" href="/Products/" >业务产品</a> 
+</div>
+
+<script type="text/javascript">
+    function webSearch() {
+        var val = document.getElementById("keyword").value;
+
+        if (val != "" && val != "请输入关键字. . .") {
+            cf_CmbSearch(val, "fx")
+        } else {
+            alert("关键词不能为空，请输入关键词。");
+        }
+    }
+</script>
+
+<div class="maincontent">
+	<div class="left">
+		<div class="mm">
+			<span class="title">自助结售汇</span>
+			<div class="lgbtns">
+				<a href="javascript:cf_HBWindows();" class="first" cname="网上银行登录" oname="个人银行大众版" otype="文字链接">个人银行大众版</a> <a href="javascript:cf_EWallet();" cname="网上银行登录" oname="个人银行专业版" otype="文字链接">
+					个人银行专业版</a> <a href="javascript:cf_WMAzybInstall();" cname="网上银行登录" oname="财富账户专业版" otype="文字链
+接">财富账户专业版</a>
+			</div>
+		</div>
+	</div>
+	<div class="mid">
+		<A href="#" target=_blank><IMG border=0 src="http://images.cmbchina.com/cmbcms/202005/ed9602e6-3bbd-45d4-ab32-a8feaf4d1e9f.png" width=530 height=155></A>
+	</div>
+	
+	<div class="right">
+		<div class="bj">
+			<div class="top">
+				<div class="bottom">
+					<span class="title">推荐业务</span>
+					<div class="content">
+						<span class="up"></span>
+						<div class="mid" style="height:108px;">
+						<div>
+						<ul>
+							
+								  <li>
+									·<a href="http://www.cmbchina.com/personal/living/LivingInfo.aspx?guid=af9fd53b-dc57-4690-834e-7b59f19e4e9e" target="_blank" title="个人自助结售汇业务"  
+cname="推荐业务" oname="个人自助结售汇业务" otype="文字链接">
+										个人自助结售汇业务</a>
+										</li>
+								
+								  <li>
+									·<a href="http://www.cmbchina.com/personal/living/LivingInfo.aspx?guid=f09fe257-85a4-41f3-b364-6411df7096fa" target="_blank" title="自助境外汇款业务"  
+cname="推荐业务" oname="自助境外汇款业务" otype="文字链接">
+										自助境外汇款业务</a>
+										</li>
+								
+								  <li>
+									·<a href="http://www.cmbchina.com/personal/saving/SavingInfo.aspx?pageid=saving13" target="_blank" title="境外汇款"  
+cname="推荐业务" oname="境外汇款" otype="文字链接">
+										境外汇款</a>
+										</li>
+								
+								  <li>
+									·<a href="http://www.cmbchina.com/personal/living/LivingInfo.aspx?pageid=gjsyzzsb" target="_blank" title="国际收入自助申报"  
+cname="推荐业务" oname="国际收入自助申报" otype="文字链接">
+										国际收入自助申报</a>
+										</li>
+								
+								  <li>
+									·<a href="http://www.cmbchina.com/personal/invest/InvestInfo.aspx?guid=f3323b30-2374-45ac-b7e3-8606f12813ad" target="_blank" title="外汇买卖"  
+cname="推荐业务" oname="外汇买卖" otype="文字链接">
+										外汇买卖</a>
+										</li>
+								
+							</ul>
+							</div>
+						</div>
+						<span class="btm"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+    <div class="maincontent">
+        <div class="left">
+            
+
+<div class="leftsubmenu">
+    <span class="title">外汇行情</span>
+    <div class="content" id="leftbox">
+        <ul>
+            <li><a href="./" class='cur'  cname="外汇行情" oname="外汇实时汇率" otype="文字链接">外汇实时汇率</a></li>
+            <li><a href="./CmbQuote.aspx"   cname="外汇行情" oname="招行外汇实盘买卖报价" otype="文字链接">招行外汇实盘买卖报价</a></li>
+        </ul>
+        
+
+<div class="btns">
+    <!--<a href="/Download/ClientDownload.htm" target="_blank" cname="外汇行情" oname="外汇行情软件下载" otype="文字链接">外汇行情软件下载</a>-->
+    
+<a href="http://www.cmbchina.com/CmbWebPubInfo/InterestRate.aspx?chnl=ckrate" target="_blank" cname="外汇行情" oname="外汇存款利率表" otype="文字链接">外汇存款利率表</a>
+<a href="http://www.cmbchina.com/CmbWebPubInfo/Cal_Forex.aspx?chnl=whjsq" target="_blank" cname="外汇行情" oname="外汇兑换计算器" otype="文字链接">外汇兑换计算器</a>
+</div>
+    </div>
+</div>
+        </div>
+        <div class="contentshow fontsmall">
+            <div class="title">
+                <span>外汇实时汇率</span></div>
+            <div class="box hq" id="rightbox">
+                <table cellpadding="0" cellspacing="0" width="98%" border="0" style="margin: 10px auto;">
+                    <tr>
+                        <td>
+                            <a href="javascript:cf_HBWindows();" cname="外汇行情" class="bg" oname="自助购汇" otype="文字链接">
+                                <img src="../images/wh-zzgh.png" border="0" width="91" height="25" alt="自助购汇" /></a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                    href="javascript:cf_HBWindows();" cname="外汇行情" class="bg" oname="自助结汇" otype="文字链接"><img src="../images/wh-zzjh.png" border="0" width="91"
+                                        height="25" alt="自助结汇" /></a>
+                        </td>
+                        <td style="text-align: right;">
+                            <a href="javascript:self.print();">
+                                <img src="../images/print.gif" border="0" width="57" height="20" alt="打印" /></a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                    href="javascript:document.location.reload();"><img src="../images/refresh.gif" border="0"
+                                        width="57" height="20" alt="刷新" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-top: 6px; font-size: 14px;" align="center">当前日期：2021年04月16日</td>
+                    </tr>
+                </table>
+                <div id="realRateInfo">
+                    <table cellpadding="0" cellspacing="1" width="740" align="center" class="data">
+                        <tr>
+                            <td class="head fontbold" width="70">
+                                交易币
+                            </td>
+                            <td class="head" width="65">
+                                交易币单位
+                            </td>
+                            <td class="head fontbold" width="55">
+                                基本币
+                            </td>           
+                            <td class="head" width="65">
+                                现汇卖出价
+                            </td>
+                            <td class="head" width="65">
+                                现钞卖出价
+                            </td>
+                            <td class="head" width="65">
+                                现汇买入价
+                            </td>
+                            <td class="head" width="65">
+                                现钞买入价
+                            </td>
+                            <td class="head" width="65">
+                                时间
+                            </td>
+                            <td class="head">
+                                汇率走势图
+                            </td>
+                        </tr>
+                        
+                                <tr>
+                                    <td class="fontbold">
+                                        港币
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        84.03
+                                    </td>
+                                     <td class="numberright">
+                                        84.03
+                                    </td>
+                                    <td class="numberright">
+                                        83.69
+                                    </td>
+                                    <td class="numberright">
+                                        83.11
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('港币');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        新西兰元
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        468.15
+                                    </td>
+                                     <td class="numberright">
+                                        468.15
+                                    </td>
+                                    <td class="numberright">
+                                        464.41
+                                    </td>
+                                    <td class="numberright">
+                                        449.73
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('新西兰元');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        澳大利亚元
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        506.76
+                                    </td>
+                                     <td class="numberright">
+                                        506.76
+                                    </td>
+                                    <td class="numberright">
+                                        502.72
+                                    </td>
+                                    <td class="numberright">
+                                        486.82
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('澳大利亚元');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        美元
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        653.50
+                                    </td>
+                                     <td class="numberright">
+                                        653.50
+                                    </td>
+                                    <td class="numberright">
+                                        650.57
+                                    </td>
+                                    <td class="numberright">
+                                        645.35
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('美元');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        欧元
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        784.79
+                                    </td>
+                                     <td class="numberright">
+                                        784.79
+                                    </td>
+                                    <td class="numberright">
+                                        778.53
+                                    </td>
+                                    <td class="numberright">
+                                        753.91
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('欧元');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        加拿大元
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        523.16
+                                    </td>
+                                     <td class="numberright">
+                                        523.16
+                                    </td>
+                                    <td class="numberright">
+                                        519.00
+                                    </td>
+                                    <td class="numberright">
+                                        502.58
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('加拿大元');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        英镑
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        904.03
+                                    </td>
+                                     <td class="numberright">
+                                        904.03
+                                    </td>
+                                    <td class="numberright">
+                                        896.83
+                                    </td>
+                                    <td class="numberright">
+                                        868.46
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('英镑');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        日元
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        6.0171
+                                    </td>
+                                     <td class="numberright">
+                                        6.0171
+                                    </td>
+                                    <td class="numberright">
+                                        5.9691
+                                    </td>
+                                    <td class="numberright">
+                                        5.7803
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('日元');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        新加坡元
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        490.84
+                                    </td>
+                                     <td class="numberright">
+                                        490.84
+                                    </td>
+                                    <td class="numberright">
+                                        486.92
+                                    </td>
+                                    <td class="numberright">
+                                        471.52
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('新加坡元');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td class="fontbold">
+                                        瑞士法郎
+                                    </td>
+                                    <td align="center">
+                                        100
+                                    </td>
+                                    <td align="center" class="fontbold">
+                                        人民币
+                                    </td>                                 
+                                    <td class="numberright">
+                                        712.40
+                                    </td>
+                                     <td class="numberright">
+                                        712.40
+                                    </td>
+                                    <td class="numberright">
+                                        706.72
+                                    </td>
+                                    <td class="numberright">
+                                        684.37
+                                    </td>
+                                    <td align="center">
+                                        22:18:38
+                                    </td>
+                                    <td align="center">
+                                        <a href="javascript:link2History('瑞士法郎');">查看历史&gt;&gt;</a>
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                    <span class="tip">以上资料仅供参考，以办理业务时的实时汇率为准。</span>
+                </div>
+                <div style="margin: 6px auto 0 auto; text-align: center; line-height: 20px; color:Red;">
+                    <a href="http://www.cmbchina.com/mbankweb" target="_blank"><span class="red">温馨提示：1、您可通过手机登录手机一网通(http://m.cmbchina.com)，随时随地查询金融市场行情，赶紧来体验吧！
+                    </span></a>
+                    <br />
+                    2、您可登录网上银行大众版->外汇管理进行自助购汇、结汇业务。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" defer="defer">
+        adjustHeight("leftbox", "rightbox");
+    
+        function dynaFresh() {
+        fx.ajax({
+            type: "GET",
+            url: "http://xds.cmbchina.com/CmbFxWebService/RealrateService.aspx?func=Realrate",
+	        data: "",
+            dataType: "xml",
+	        cache: false,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                fx("#realRateInfo").html("<span class='downerror'>下载数据发生错误，请重试!</span>");
+            },
+            success: function(xml) {
+                var tbInfo = "<table cellpadding='0' cellspacing='1' width='740' align='center' class='data'><tr><td class='head' width='65'>交易币</td><td class='head' width='50'>交易币单位</td><td class='head' width='65'>基本币</td><td class='head' width='65'>中间价</td><td class='head' width='80'>现汇卖出价</td><td class='head' width='80'>现钞卖出价</td><td class='head' width='80'>现汇买入价</td><td class='head' width='80'>现钞买入价</td><td class='head' width='80'>时间</td><td class='head'>&nbsp;</td></tr>";
+                
+                fx(xml).find("FxInfo").each(function(i){
+                    var zCcyNbr = fx(this).children("ZCcyNbr").text();
+                    var zRtbBid = fx(this).children("ZRtbBid").text();
+                    var zRthOfr = fx(this).children("ZRthOfr").text();
+                    var zRtcOfr = fx(this).children("ZRtcOfr").text();
+                    var zRthBid = fx(this).children("ZRthBid").text();
+                    var zRtcBid = fx(this).children("ZRtcBid").text();
+                    var zRatTim = fx(this).children("ZRatTim").text();
+                    var viewHistoryLink = "<a href='History.aspx?nbr=" + escape(zCcyNbr) + "' target='_blank'>查看历史&gt;&gt;</a>";
+                    
+                    tbInfo += "<tr><td>" + zCcyNbr + "</td><td align='center'>100</td><td align='center'>人民币</td><td class='numberright'>" + zRtbBid + "</td><td class='numberright'>" + zRthOfr +"</td><td class='numberright'>" + zRtcOfr + "</td><td class='numberright'>" + zRthBid + "</td><td class='numberright'>" + zRtcBid + "</td><td align='center'>" + zRatTim + "</td><td align='center'>" + viewHistoryLink + "</td></tr>";
+                });
+                
+                tbInfo += "</table><span class='tip'>以上资料仅供参考，以办理业务时的实时汇率为准。</span>";
+
+                fx("#realRateInfo").html(tbInfo);
+            }
+        });
+    }
+
+    //window.setInterval(dynaFresh, 15000);
+    
+    function link2History(nbr) {
+        window.open("History.aspx?nbr=" + escape(nbr));
+    }
+    </script>
+
+
+<DIV id=footer>
+<UL>
+<LI><A href="http://www.cmbchina.com/webpages/certificate.htm" target=_blank>安全说明</A> </LI>
+<LI>| </LI>
+<LI><A href="http://www.cmbchina.com/about/?pageid=webnotice" target=_blank>网站声明</A> </LI>
+<LI>| </LI>
+<LI><A href="http://www.cmbchina.com/about/?pageid=privacy" target=_blank>隐私保密条款</A> </LI>
+<LI>| </LI>
+<LI><A href="http://www.cmbchina.com/about/sitemap.aspx" target=_blank>网站地图</A> </LI>
+<LI>| </LI>
+<LI><A href="http://www.cmbchina.com/about/?pageid=goodlink" target=_blank>友情链接</A> </LI>
+<LI>| </LI>
+<LI><A href="javascript:addFav(location.href, document.title);">加入收藏夹</A> </LI>
+<LI>| </LI>
+<LI><A href="http://career.cmbchina.com/" target=_blank>人才招聘</A> </LI>
+<LI>| </LI>
+<LI><A href="http://www.cmbchina.com/mbankweb/site/" target=_blank>手机一网通</A> </LI></UL></DIV>
+<DIV id=phonetips><SPAN>服务热线：95555&nbsp;&nbsp;&nbsp; </SPAN><SPAN>境外服务热线：86-755-84391000</SPAN><BR><SPAN>信用卡服务热线：400-820-5555&nbsp;&nbsp;&nbsp;</SPAN><SPAN>&nbsp;&nbsp;&nbsp;企业年金专线：400-609-5555</SPAN><BR><SPAN>金葵花贵宾服务专线：40088-95555</SPAN><SPAN>钻石贵宾服务专线：40068-95555</SPAN><SPAN>私人银行服务专线：40066-95555</SPAN> </DIV>
+<DIV id=co>
+<DIV class=wangan><A title=网络安全标志 href="http://www.cmbchina.com/webpages/cmbsafe/index.htm" target=_blank></A></DIV>
+<DIV class=gdsz><A title=网络安全标志 href="http://www.sznet110.gov.cn/netalarm/index.jsp" target=_blank></A></DIV>
+<DIV class=copyright><SPAN>招商银行一网通&nbsp;&nbsp;创建于一九九七年</SPAN> <BR>©<SPAN>&nbsp;2020&nbsp;&nbsp;招商银行&nbsp;&nbsp;版权所有</SPAN> <BR><SPAN><A href="http://beian.miit.gov.cn/" target=_blank>粤ICP备17088997号</A></SPAN> </DIV></DIV>
+<STYLE type=text/css>#footer {
+ BACKGROUND-IMAGE: url(http://www.cmbchina.com/images/bottom_bg.gif); MARGIN: 8px auto 0px; WIDTH: 950px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px; OVERFLOW: hidden
+}
+#footer UL {
+ LIST-STYLE-TYPE: none; MARGIN: 0px auto; WIDTH: 594px; OVERFLOW: hidden
+}
+#footer UL LI {
+ LINE-HEIGHT: 30px; MARGIN: 0px 4px; DISPLAY: inline; FONT-FAMILY: 宋体, Arial, Verdana, Helvetica, Sans-Serif; FLOAT: left; COLOR: #ffffff; FONT-SIZE: 12px
+}
+#footer A:link {
+ COLOR: #ffffff; TEXT-DECORATION: none
+}
+#footer A:visited {
+ COLOR: #ffffff; TEXT-DECORATION: none
+}
+#footer A:hover {
+ COLOR: #ff0000; TEXT-DECORATION: none
+}
+#phonetips {
+ TEXT-ALIGN: center; LINE-HEIGHT: 20px; MARGIN: 12px auto 0px; OVERFLOW: hidden
+}
+#phonetips SPAN {
+ MARGIN: 0px 8px; FONT-FAMILY: Arial, Verdana, Helvetica, Sans-Serif, 宋体; COLOR: #333333; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+#co {
+ MARGIN: 6px auto 0px; WIDTH: 330px; OVERFLOW: hidden
+}
+#co .wangan {
+ MARGIN-TOP: 14px; FLOAT: left; MARGIN-RIGHT: 10px
+}
+#co .wangan A {
+ TEXT-INDENT: -9000px; WIDTH: 40px; DISPLAY: block; BACKGROUND: url(http://file.cmbchina.com/cmbcms/201112/4e215928-e641-479a-84fe-10376d4acbdf.gif) no-repeat; HEIGHT: 54px
+}
+#co .gdsz A {
+ TEXT-INDENT: -9000px; WIDTH: 60px; DISPLAY: block; BACKGROUND: url(http://file.cmbchina.com/cmbcms/201112/2e2154ed-ce40-48b0-9086-e7e17a272e21.gif) no-repeat; HEIGHT: 80px
+}
+#co .gdsz {
+ FLOAT: left
+}
+#co .copyright {
+ TEXT-ALIGN: center; LINE-HEIGHT: 18px; MARGIN-TOP: 14px; FONT-FAMILY: Arial, Verdana, Helvetica, Sans-Serif, 宋体; FLOAT: right; COLOR: #333333; FONT-SIZE: 12px
+}
+</STYLE>
+
+<SCRIPT type=text/javascript>
+function addFav(url, title) {
+ try {
+   if (document.all) {
+      window.external.addFavorite(url, title); 
+     } else if (window.sidebar) {
+      window.sidebar.addPanel(title, url, ""); 
+     } else {
+      alert('抱歉！您的浏览器不支持直接添加收藏夹。');
+     } 
+ } catch(e) {
+      alert('抱歉！您的浏览器不支持直接添加收藏夹。');
+ }
+}
+</SCRIPT>
+<script language=javascript src="../Scripts/sdc_web.js" type="text/javascript"></script>
+<script type="text/javascript">
+    if (window.screen.width > 1024) {
+        document.body.style.background = "#fff url(http://www.cmbchina.com/images/bg.gif) no-repeat center top";
+	    document.getElementById("header").style.width = "950px";
+	} else {
+        document.body.style.background = "#fff";
+        document.getElementById("header").style.width = "100%";
+    }
+</script>
+<script type="text/javascript">
+if(fx("#branch"))
+{
+     fx("#branch option[value='321']").remove(); 
+     fx("#branch option[value='323']").remove(); 
+     fx("#branch option[value='118']").remove(); 
+ }
+</script>
+</body>
+</html>

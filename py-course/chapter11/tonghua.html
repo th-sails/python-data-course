@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <!–[if lte IE 8]>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <![endif]–>
+    <!–[if IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7;IE=9"/>
+    <![endif]–>
+    <title>同花顺数据中心_同花顺金融网</title>
+    <meta name="Keywords" content="业绩预告,业绩预增,中报业绩预告,年报业绩预告,业绩预减,净利润变动,两市业绩预告一览" />
+    <meta name="Description" content="同花顺财经财报提供上市公司最新业绩预告、业绩预增、中报业绩预告及年报业绩预告，为投资者提供两市业绩预告一览和业绩预减、净利润变动等数据。" />
+            <link rel="stylesheet" href="//s.thsi.cn/cb?css/datacenter/home_v3.min.css"/>
+                <link rel="stylesheet" href="//s.thsi.cn/css/datacenter/financial/base.css"/>
+    				<link rel="stylesheet" href="//s.thsi.cn/css/datacenter/financial/page-202008032148.min.css"/>
+			    <link rel="stylesheet" href="//s.thsi.cn/css/datacenter/iwcxg.css"/>
+    <link rel="stylesheet" href="//s.thsi.cn/css/datacenter/hqcss.css"/>
+        	
+<style type="text/css">
+
+    #footer{border-top:1px solid #777;clear:both;overflow:hidden;padding-top:10px;text-align:center;font-size:12px;line-height:24px;width:1200px;margin:10px auto;font-family:tahoma,arial;}
+    #footer p{margin:0;}
+    #footer p.c333{color:#333;}
+    #footer span{color:#999999;padding:0 10px;}
+    #footer a{line-height:24px;color:#000;text-decoration:none;}
+    #footer a:hover{color:#CC3300;text-decoration:none;}
+    #footer .smarterwiki-linkify{padding:0 14px;}
+    .logined_box{height: 68px;color: #fff;font-size: 14px;}
+    .logined_box a{display: block;height: 68px;float: left;line-height: 68px;color: #fff;  }
+    .login_box span,.logined_box span{float: left;line-height: 68px;margin: 0 5px;  }
+
+</style>    
+    <style>
+     .winrate-high {
+      width:14px;
+      height:14px;
+      line-height:14px;
+      font-weight: bold;
+      color:#db4a39;
+    }
+    .m-ques-icon:hover{text-decoration:none!important;}
+    
+    </style>
+    </head>
+<body>
+
+<script type="text/javascript" src="//s.thsi.cn/js/chameleon/chameleon.min.1618327.js"></script> <script type="text/javascript">
+         var thsInfo,clientCls,pageCls,adCls,rowCls,footerCls,fixCls,fixlhbCls,navCls,tipCls,prowCls,spanFrCls;
+         try {
+           //判断客户端版本
+           var thsInfo = external.createObject('Info');
+         } catch (e) {}
+         try {
+             //判断远航版券商版本
+             if (!thsInfo) {
+                 var thsInfo = window.HevoCef && 'IsHevoCef' in window.HevoCef;
+             }
+         } catch (e) {}
+         function getQueryVariable(variable)
+         {//获取url参数
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                        var pair = vars[i].split("=");
+                        if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
+         }
+         thsInfo = thsInfo?thsInfo:getQueryVariable('isclient');
+         clientCls = thsInfo ? '<div class="header hide">' :'<div class="header">';
+         pageCls = thsInfo ? '<div class="page-nav hide">' :'<div class="page-nav">';
+         adCls = thsInfo ? '<div id="ad_box" class="ad-box hide">' :'<div id="ad_box" class="ad-box">';
+         rowCls = thsInfo ? '<div class="clearfix hide">' : '<div class="clearfix">';
+         footerCls = thsInfo ? '<div id="footer" class="hide"  style="margin-top: 35px;">' : '<div id="footer"  style="margin-top: 35px;">';
+         fixlhbCls = thsInfo ? '<div id="J_fixedbar" class="fixedbar hide">' : '<div id="J_fixedbar" class="fixedbar">';
+         fixCls = thsInfo ? '<div class="fixedbar hide">' : '<div class="fixedbar">';
+         navCls = thsInfo ? '<div class="page_nav hide">' : '<div class="page_nav">';
+         tipCls = thsInfo ? '<p class="tip hide">' : '<p class="tip">';
+         prowCls = thsInfo ? '<div class="page-row hide">' : '<div class="page-row">';
+         spanFrCls = thsInfo ? '<span class="fr hide" style="width: 315px;">' : '<span class="fr" style="width: 315px;">';
+          window.onload = function () {
+            function checkQs (fn) {
+              try {
+                if (window.API) {
+                  window.API.use({
+                    method: 'Passport.get',
+                    data: 'm_qs',
+                    success: function (qsid) {
+                      if (fn) fn(parseInt(qsid) < 800)
+                    }
+                  })
+                } else {
+                  var passport = external.createObject('Passport');
+                  var qsid = passport.get('m_qs');
+                  if (fn) fn(parseInt(qsid) < 800)
+                }
+              } catch (e) {
+              }
+            }
+            function clientJumpToCode (stockcode) {
+              market = stockcode.substring(0, 1);
+              id = (market == 0 || market == 3 || market == 6) ? "9354" : "12086";
+              try {
+                if (window.API) {
+                  window.API.use({
+                    method: 'Quote.switchPage',
+                    data: {
+                      'id': id,
+                      'code': stockcode,
+                      'period': '0'
+                    }
+                  })
+                } else {
+                  var a = external.createObject('Quote');
+                  var b = { 'id': id, 'code': stockcode, 'period': '0' }
+                  a.switchPage(b);
+                }
+              } catch (e) { }
+            }
+            function checkCode (url) {
+              if (!url) return false
+              var regs = [
+                '[htps:\/]+stockpage.10jqka.com.cn\/([0-9]{6})[\/a-z]*',
+                '\/market\/rzrqgg\/code\/([0-9]{6})[\/]*',
+                '[htps:\/]+data.10jqka.com.cn/market/longhu/code/([0-9]{6})[\/]*',
+                '[htps:\/]+data.10jqka.com.cn/market/rzrqgg/code/([0-9]{6})[\/]*'
+              ]
+              for (var i = 0; i < regs.length; i++) {
+                var reg = regs[i]
+                var thisReg = new RegExp(reg, 'g')
+                var matchRes = url.replace(thisReg, function ($0, $1, $2) { return $1 })
+                if (matchRes && matchRes.match(/^[\d]{6}$/g)) {
+                  return matchRes
+                }
+              }
+              return false
+            }
+            function qsClientOperate () {
+              for (var n = 0; n < $('a').length; n++) {
+                var link = $('a').eq(n).attr('href')
+                var code = checkCode(link)
+                if (code) {
+                  var jumpLink = "hxa://hexin.exe 'opt=13&param=" + code + "|'/"
+                  $('a').eq(n).attr('target', '_self').attr('href', jumpLink)
+                } else {
+                  $('a').eq(n).attr('target', '_self').attr('href', 'javascript:void(0);').attr('data-href', link)
+                }
+              }
+              var qsHideEle = ['.m-ques-icon', '.fixedbar']
+              setTimeout(function () {
+                for (var i = 0; i < qsHideEle.length; i++) {
+                  if ($(qsHideEle[i]).length > 0) {
+                    $(qsHideEle[i]).hide()
+                  }
+                }
+              })
+            }
+            checkQs(function (isQs) {
+              if (isQs) {
+                qsClientOperate()
+                $(document).ajaxSuccess(function () {
+                  setTimeout(function () {
+                    qsClientOperate()
+                  })
+                })
+              }
+            })
+          }
+
+        </script>
+
+<script type="text/javascript">document.write(clientCls)</script>
+    <div class="header-search">
+        <div class="w1200 clearfix">
+            <div class="hdlogo">
+                <a target="_blank" class="site-logo" href="http://www.10jqka.com.cn"> <img width="142" height="46" src="//i.thsi.cn/images/datacenter/financial/logo-ths.png" title="同花顺" alt="同花顺"></a>
+                <h1><a target="_blank" title="数据中心" class="sub-logo" href="http://data.10jqka.com.cn/">数据中心</a></h1>
+            </div>
+          <div class="search-box">
+                <div class="search-list">
+                    <a href="###">信息</a><span>|</span>
+                    <a href="###"  class="cur">股票</a><span>|</span>
+                    <a href="###">百科</a>
+                </div>
+                <div class="search-main">
+                    <span style="display: none;">
+                        <input type="text" value="搜研报/看公告/找概念" class="search-input" id="search-input-xx">
+                        <input type="submit" value="" class="search-btn" id="search-btn-xx">
+                    </span>
+                    <span>
+                        <input type="text" value="输入股票/基金代码、简称或关键字" class="search-input" id="search-input-gp">
+                        <input type="submit" value="" class="search-btn" id="search-btn-gp">
+                    </span>
+                    <span style="display: none;">
+                        <input type="text" value="请输入词条名" class="search-input" id="search-input-bk">
+                        <input type="submit" value="" class="search-btn" id="search-btn-bk">
+                    </span>
+                </div>
+            </div>
+           <div class="login-box hide">
+                <a href="http://upass.10jqka.com.cn/login?redir=HTTP_REFERER" target="_blank">登录
+</a><span>|</span>
+                <a href="http://upass.10jqka.com.cn/register" target="_blank">注册</a>
+            </div>
+            <div class="logined_box fr">
+                <a href="http://stock.10jqka.com.cn/my/" target="_blank" id="J_username"></a>
+                <span>|</span>
+                <a href="javascript:;" id="header_logined_out" target="_self" class="homeloginout">退出</a>
+            </div>
+        </div>
+    </div>
+   <div class="nav">
+        <div class="w1200 inner-nav">
+            <a href="http://data.10jqka.com.cn/kcb/index/" nav="kcb" tid="kcb" >科创板</a>
+            <a href="http://data.10jqka.com.cn/market/longhu/" nav="lhb" tid="longhu" >龙虎榜</a>
+            <a href="http://data.10jqka.com.cn/ipo/xgsgyzq/" nav="xgsj"  tid="xingu" >新股数据</a>
+            <a href="http://data.10jqka.com.cn/ipo/bond/" nav="bond"  tid="kezhuanzhai" >可转债</a>
+            <a href="http://data.10jqka.com.cn/financial/yjyg/" nav="cwfx" tid="caiwu" >财务分析</a>
+            <a href="http://data.10jqka.com.cn/funds/ggzjl/" nav="zjlx"  tid="zijin" >资金流向</a>
+            <a href="http://data.10jqka.com.cn/rank/cxg/" nav="jsxg" tid="xuangu" >技术选股</a>
+            <a href="http://data.10jqka.com.cn/market/rzrq/" nav="rzrq" tid="liangrong" >融资融券</a>
+            <a href="http://data.10jqka.com.cn/market/dzjy/" nav="dzjy" tid="dazong" >大宗交易</a>
+            <a href="http://data.10jqka.com.cn/market/xsjj/" nav="xsjj" tid="xianshou" >限售解禁</a>
+            <a href="http://data.10jqka.com.cn/hgt/hgtb/" nav="hgt" tid="hushen" >沪深港通</a>
+
+            <a href="http://q.10jqka.com.cn" target="_blank" tid="hangqing">行情中心</a>
+            <a href="http://data.10jqka.com.cn/gzqh/" nav="more" tid="gengduo" >更多</a>
+        </div>
+        <div class="sub-nav">
+            <!-- span class="lhb-list">
+                <a href="http://data.10jqka.com.cn/market/longhu/" target="_blank" tid="lhbsy">龙虎榜首页</a>
+                <a href="http://data.10jqka.com.cn/market/longhu/yyb/" target="_blank" tid="rmyyb">热门营业部</a>
+                <a href="http://data.10jqka.com.cn/market/longhu/jgzy/" target="_blank" tid="jgxw">机构席位</a>
+                <a href="http://data.10jqka.com.cn/market/longhu/ggph/" target="_blank" tid="ggtj">个股统计</a>
+            </span-->
+            <span class="xgsj-list">
+                <a href="http://data.10jqka.com.cn/ipo/xgsgyzq/" target="_blank" tid="xgsg">新股申购</a>
+                <a href="http://data.10jqka.com.cn/ipo/xgpt/" target="_blank" tid="xgrl">新股日历</a>
+                <a href="http://data.10jqka.com.cn/ipo/xgsh/" target="_blank" tid="xgsh">新股上会</a>
+                <a href="http://data.10jqka.com.cn/ipo/xgyp/" target="_blank" tid="xgyp">新股预披露</a>
+                <a href="http://data.10jqka.com.cn/ipo/xgsr/" target="_blank" tid="xgsr">上市首日</a>
+                <a href="http://data.10jqka.com.cn/ipo/syg/" target="_blank" tid="syg">IPO受益股</a>
+            </span>
+            <span class="cwfx-list">
+                <a href="http://data.10jqka.com.cn/financial/yjyg/" target="_blank" tid="yjyg">业绩预告</a>
+                <a href="http://data.10jqka.com.cn/financial/yjkb/" target="_blank" tid="yjkb">业绩快报</a>
+                <a href="http://data.10jqka.com.cn/financial/yjgg/" target="_blank" tid="yjgg">业绩公告</a>
+                <a href="http://data.10jqka.com.cn/financial/yypl/" target="_blank" tid="yypl">业绩预披露</a>
+                <a href="http://data.10jqka.com.cn/financial/sgpx/" target="_blank" tid="sgpx">高送转</a>
+                <a href="http://data.10jqka.com.cn/financial/ggjy/" target="_blank" tid="ggcg">高管持股</a>
+            </span>
+            <span class="zjlx-list">
+                <a href="http://data.10jqka.com.cn/funds/ggzjl/" target="_blank" tid="ggzj">个股资金</a>
+                <a href="http://data.10jqka.com.cn/funds/gnzjl/" target="_blank" tid="gnzjl">概念资金</a>
+                <a href="http://data.10jqka.com.cn/funds/hyzjl/" target="_blank" tid="hyzjl">行业资金</a>
+                <a href="http://data.10jqka.com.cn/funds/ddzz/" target="_blank" tid="ddzz">大单追踪</a>
+            </span>
+            <span class="jsxg-list">
+                <a href="http://data.10jqka.com.cn/rank/cxg/" target="_blank" tid="cxg">创新高</a>
+                <a href="http://data.10jqka.com.cn/rank/cxd/" target="_blank" tid="cxd">创新低</a>
+                <a href="http://data.10jqka.com.cn/rank/lxsz/" target="_blank" tid="lxsz">连续上涨</a>
+                <a href="http://data.10jqka.com.cn/rank/lxxd/" target="_blank" tid="lxxd">连续下跌</a>
+                <a href="http://data.10jqka.com.cn/rank/cxfl/" target="_blank" tid="cxfl">持续放量</a>
+                <a href="http://data.10jqka.com.cn/rank/cxsl/" target="_blank" tid="cxsl">持续缩量</a>
+                <a href="http://data.10jqka.com.cn/rank/xstp/" target="_blank" tid="xstp">向上突破</a>
+                <a href="http://data.10jqka.com.cn/rank/xxtp/" target="_blank" tid="xxtp">向下突破</a>
+                <a href="http://data.10jqka.com.cn/rank/ljqs/" target="_blank" tid="ljqs">量价齐升</a>
+                <a href="http://data.10jqka.com.cn/rank/ljqd/" target="_blank" tid="ljqd">量价齐跌</a>
+            </span>
+           
+            <span class="hgt-list">
+                <a href="http://data.10jqka.com.cn/hgt/hgtb/" target="_blank" tid="hgt">沪股通</a>
+                <a href="http://data.10jqka.com.cn/hgt/ggtb/" target="_blank" tid="ggtb">港股通(沪)</a>
+                <a href="http://data.10jqka.com.cn/hgt/sgtb/" target="_blank" tid="sgtb">深股通</a>
+                <a href="http://data.10jqka.com.cn/hgt/ggtbs/" target="_blank" tid="ggtbs">港股通(深)</a>
+            </span>
+            <span class="jyts-list">
+                <a href="http://data.10jqka.com.cn/tradetips/mrtbts/" target="_blank" tid="mrtbts">每日特别提示</a>
+                <a href="http://data.10jqka.com.cn/tradetips/tfpts/" target="_blank" tid="tfpts">停复牌提示</a>
+                <a href="http://data.10jqka.com.cn/tradetips/gddh/" target="_blank" tid="gddh">股东大会</a>
+                <a href="http://data.10jqka.com.cn/tradetips/tbcl/" target="_blank" tid="tbcl">特别处理</a>
+                <a href="http://data.10jqka.com.cn/market/ggsd/" target="_blank" tid="ggsd">公告速递</a>
+                
+            </span>
+            <span class="more-list">
+                <a href="http://data.10jqka.com.cn/financial/xzjp/" target="_blank" tid="xzjp">险资举牌</a>
+                <a href="http://data.10jqka.com.cn/gzqh/" target="_blank" tid="gzqh">股指期货</a>
+                <a href="http://data.10jqka.com.cn/market/zdfph/" target="_blank" tid="zdfph">涨跌幅排行</a>
+                <a href="http://data.10jqka.com.cn/market/ggsyl/" target="_blank" tid="ggsyl">个股市盈率</a>
+                <a class="js-login" href="http://data.10jqka.com.cn/market/ahgbj/" target="_blank" tid="ahgbj">AH股比价</a>
+                <a href="http://data.10jqka.com.cn/market/abgbj/" target="_blank" tid="abgbj">AB股比价</a>
+                <a href="http://data.10jqka.com.cn/macro/cpi/" target="_blank" tid="hongguan" >宏观数据</a>
+                 <a href="http://data.10jqka.com.cn/tradetips/mrtbts/" target="_blank" tid="jiaoyitishi" >交易提示</a>
+            </span>
+        </div>
+    </div>
+</div><!-- 面包屑 -->
+<div class="container w1200">
+<script type="text/javascript">document.write(pageCls)</script>
+    <div class="crumbs">
+        <a class="crumbs-links" href="http://www.10jqka.com.cn" target="_blank">同花顺</a>
+        <span class="gt">&gt;</span><a class="crumbs-links"  href="http://data.10jqka.com.cn" target="_blank">数据中心</a>
+                    </div>
+    <div class="latest-concern">
+        <span><i class="icon">HOT</i>&nbsp;热门关注：</span>
+        &nbsp;&nbsp;<a href="http://data.10jqka.com.cn/financial/xzjp/#refCountId=data_55f13c7e_426" target="_blank" title="险资举牌" >险资举牌</a>
+        &nbsp;&nbsp;<a href="http://data.10jqka.com.cn/market/longhu/#refCountId=data_55f13c7e_426" target="_blank" title="龙虎榜单">龙虎榜单</a>
+        &nbsp;&nbsp;<a href="http://data.10jqka.com.cn/market/rzrq/#refCountId=data_55f13c7e_426" target="_blank" title="融资融券">融资融券</a>
+        &nbsp;&nbsp;<a href="http://data.10jqka.com.cn/market/dzjy/#refCountId=data_55f13c7e_426" target="_blank" title="大宗交易">大宗交易</a>
+    </div>
+</div><div class="home-cont">
+    <!-- 公告速递 -->
+        <div class="home-col">
+        <div class="home-hd">
+            <h2 class="icon-ggsd"><a href="http://data.10jqka.com.cn/market/ggsd/" target="_blank">公告速递</a></h2>
+            <a href="http://www.iwencai.com/stockpick/search?ts=1&f=1&qs=ops_ths_data&tid=stockpick&w=%E4%BB%8A%E6%97%A5%E5%88%A9%E5%A5%BD%E6%96%B0%E9%97%BB%E7%9A%84%E5%85%AC%E5%8F%B8" target="_blank" class="more">更多</a>
+        </div>
+        <div class="home-bd">
+            <table>
+                <thead>
+                <tr>
+                    <th width="110">日期</th>
+                    <th width="90">股票代码</th>
+                    <th width="90">股票简称</th>
+                    <th width="80">最新价</th>
+                    <th width="80">涨跌幅</th>
+                    <th>相关公告</th>
+                    <th width="150">公告类型</th>
+                </tr>
+                </thead>
+                <tbody>
+                                <tr >
+                    <td class="first">2021-04-13</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688598/news/" target="_blank" class="stockCode">688598</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688598/news/" target="_blank">金博股份</a></td>
+                    <td class="c-fall">156.72</td>
+                    <td class="c-fall">-1.87</td>
+                    <td class="tl"><a href="http://notice.10jqka.com.cn/api/pdf/ade6da2ec501bdab.pdf" target="_blank">金博股份：8-2天职国际会计师事务所（特殊普通合伙）关于金博股份向不特定对象发行可转换公司债券申请文件审核问询函的回复（2020年财务数据更新版）</a></td>
+                    <td></td>                  
+                </tr>
+                                <tr class="odd">
+                    <td class="first">2021-04-13</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688558/news/" target="_blank" class="stockCode">688558</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688558/news/" target="_blank">国盛智科</a></td>
+                    <td class="c-fall">33.47</td>
+                    <td class="c-fall">-3.24</td>
+                    <td class="tl"><a href="http://notice.10jqka.com.cn/api/pdf/341ba1775f773831.pdf" target="_blank">国盛智科：关联交易决策制度（修订）</a></td>
+                    <td>关联交易公告</td>                  
+                </tr>
+                                <tr >
+                    <td class="first">2021-04-13</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688157/news/" target="_blank" class="stockCode">688157</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688157/news/" target="_blank">松井股份</a></td>
+                    <td class="c-rise">82.8</td>
+                    <td class="c-rise">1.35</td>
+                    <td class="tl"><a href="http://notice.10jqka.com.cn/api/pdf/a1d14e069a44b7e4.pdf" target="_blank">松井股份：湖南松井新材料股份有限公司2021年第一季度业绩预告的自愿性披露公告</a></td>
+                    <td>公司公告</td>                  
+                </tr>
+                                </tbody>
+            </table>
+        </div>
+    </div>
+        <!-- 龙虎榜 -->
+    <div class="home-col home-lhb">
+        <div class="home-hd">
+            <h2 class="icon-lhb"><a href="http://data.10jqka.com.cn/market/longhu/" target="_blank">龙虎榜</a></h2>
+            <a href="http://data.10jqka.com.cn/market/longhu/" target="_blank" class="more">更多</a>
+        </div>
+        <div class="home-bd clearfix">
+			<table>
+					<tbody>
+						<tr class="lhb-market clearfix hs">
+							<td style="padding: 4px 0px;background:#f1f5f6;">
+								<div class="lhb-name">
+									<div class="name">沪市</div>
+								</div>
+							</td>
+							<td style="padding: 4px 0px;">
+																<div class="lhb-table">
+									<table>
+										<tbody>
+										               							<tr>
+										<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/688068/" target="_blank">热景生物</a>
+	                    <span class="lhb-zdf c-rise">20.01%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600891/" target="_blank">退市秋林</a>
+	                    <span class="lhb-zdf c-fall">0.00%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600701/" target="_blank">退市工新</a>
+	                    <span class="lhb-zdf c-fall">0.00%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600769/" target="_blank">祥龙电业</a>
+	                    <span class="lhb-zdf c-fall">-6.46%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/603759/" target="_blank">海天股份</a>
+	                    <span class="lhb-zdf c-fall">-5.42%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/605055/" target="_blank">迎丰股份</a>
+	                    <span class="lhb-zdf c-rise">10.04%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600960/" target="_blank">渤海汽车</a>
+	                    <span class="lhb-zdf c-rise">10.14%</span>
+					</td>
+					                       </tr>
+                    										               							<tr>
+										<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600467/" target="_blank">好当家</a>
+	                    <span class="lhb-zdf c-rise">10.19%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/601339/" target="_blank">百隆东方</a>
+	                    <span class="lhb-zdf c-rise">10.07%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/605188/" target="_blank">国光连锁</a>
+	                    <span class="lhb-zdf c-rise">10.04%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/900919/" target="_blank">绿庭B股</a>
+	                    <span class="lhb-zdf c-fall">-10.00%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/601888/" target="_blank">中国中免</a>
+	                    <span class="lhb-zdf c-fall">-10.00%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600956/" target="_blank">新天绿能</a>
+	                    <span class="lhb-zdf c-fall">-10.01%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600715/" target="_blank">文投控股</a>
+	                    <span class="lhb-zdf c-fall">-10.09%</span>
+					</td>
+					                       </tr>
+                    										               							<tr>
+										<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600200/" target="_blank">江苏吴中</a>
+	                    <span class="lhb-zdf c-rise">9.98%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600202/" target="_blank">哈空调</a>
+	                    <span class="lhb-zdf c-rise">9.93%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600779/" target="_blank">水井坊</a>
+	                    <span class="lhb-zdf c-rise">9.89%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/600814/" target="_blank">杭州解百</a>
+	                    <span class="lhb-zdf c-rise">9.93%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/603324/" target="_blank">盛剑环境</a>
+	                    <span class="lhb-zdf c-rise">10.01%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/603668/" target="_blank">天马科技</a>
+	                    <span class="lhb-zdf c-rise">10.05%</span>
+					</td>
+															               							<td>
+						<a href="http://data.10jqka.com.cn/market/longhu/code/601113/" target="_blank">ST华鼎</a>
+	                    <span class="lhb-zdf c-rise">5.00%</span>
+					</td>
+					                       </tr>
+                    															</tbody>
+			</table>
+			</div>
+			            </td>
+			</tr>
+				<tr class="lhb-market clearfix ss">
+					<td style="padding: 4px 0px;background: #f1f5f6;">
+						<div class="lhb-name">
+							<div class="name">深市</div>
+						</div>
+					</td>
+					<td style="padding:4px 0px;">
+						<div class="lhb-table">
+							<table>
+								<tbody>
+																                            	<tr>
+                            	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300094/" target="_blank">国联水产</a>
+	                                <span class="lhb-zdf c-rise">20.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300437/" target="_blank">清水源</a>
+	                                <span class="lhb-zdf c-rise">20.02%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300942/" target="_blank">易瑞生物</a>
+	                                <span class="lhb-zdf c-rise">20.01%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300202/" target="_blank">聚龙股份</a>
+	                                <span class="lhb-zdf c-fall">-17.62%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300941/" target="_blank">创识科技</a>
+	                                <span class="lhb-zdf c-rise">9.89%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300938/" target="_blank">信测标准</a>
+	                                <span class="lhb-zdf c-rise">9.98%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300931/" target="_blank">通用电梯</a>
+	                                <span class="lhb-zdf c-fall">-4.10%</span>
+	                            </td>
+                                                        	</tr>
+                            																                            	<tr>
+                            	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300960/" target="_blank">通业科技</a>
+	                                <span class="lhb-zdf c-fall">-6.76%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300967/" target="_blank">晓鸣股份</a>
+	                                <span class="lhb-zdf c-rise">581.72%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002071/" target="_blank">长城退</a>
+	                                <span class="lhb-zdf c-fall">-3.85%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002053/" target="_blank">云南能投</a>
+	                                <span class="lhb-zdf c-fall">-8.78%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000899/" target="_blank">赣能股份</a>
+	                                <span class="lhb-zdf c-rise">9.94%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000993/" target="_blank">闽东电力</a>
+	                                <span class="lhb-zdf c-rise">10.02%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002348/" target="_blank">高乐股份</a>
+	                                <span class="lhb-zdf c-fall">-0.35%</span>
+	                            </td>
+                                                        	</tr>
+                            																                            	<tr>
+                            	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/003032/" target="_blank">传智教育</a>
+	                                <span class="lhb-zdf c-rise">10.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002177/" target="_blank">御银股份</a>
+	                                <span class="lhb-zdf c-rise">10.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002162/" target="_blank">悦心健康</a>
+	                                <span class="lhb-zdf c-rise">10.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000798/" target="_blank">中水渔业</a>
+	                                <span class="lhb-zdf c-rise">10.03%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002762/" target="_blank">金发拉比</a>
+	                                <span class="lhb-zdf c-rise">10.01%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/003001/" target="_blank">中岩大地</a>
+	                                <span class="lhb-zdf c-fall">-5.71%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002999/" target="_blank">天禾股份</a>
+	                                <span class="lhb-zdf c-fall">-8.56%</span>
+	                            </td>
+                                                        	</tr>
+                            																                            	<tr>
+                            	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/003036/" target="_blank">泰坦股份</a>
+	                                <span class="lhb-zdf c-fall">-9.99%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/003033/" target="_blank">征和工业</a>
+	                                <span class="lhb-zdf c-rise">10.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002639/" target="_blank">雪人股份</a>
+	                                <span class="lhb-zdf c-fall">-10.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/001896/" target="_blank">豫能控股</a>
+	                                <span class="lhb-zdf c-fall">-9.96%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000883/" target="_blank">湖北能源</a>
+	                                <span class="lhb-zdf c-fall">-10.05%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000862/" target="_blank">银星能源</a>
+	                                <span class="lhb-zdf c-fall">-10.03%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002147/" target="_blank">*ST新光</a>
+	                                <span class="lhb-zdf c-rise">5.11%</span>
+	                            </td>
+                                                        	</tr>
+                            																                            	<tr>
+                            	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000980/" target="_blank">*ST众泰</a>
+	                                <span class="lhb-zdf c-rise">4.97%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002289/" target="_blank">ST宇顺</a>
+	                                <span class="lhb-zdf c-rise">5.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000971/" target="_blank">*ST高升</a>
+	                                <span class="lhb-zdf c-rise">4.90%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002696/" target="_blank">百洋股份</a>
+	                                <span class="lhb-zdf c-rise">9.93%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002168/" target="_blank">惠程科技</a>
+	                                <span class="lhb-zdf c-rise">10.10%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002369/" target="_blank">卓翼科技</a>
+	                                <span class="lhb-zdf c-rise">8.23%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002321/" target="_blank">华英农业</a>
+	                                <span class="lhb-zdf c-rise">10.09%</span>
+	                            </td>
+                                                        	</tr>
+                            																                            	<tr>
+                            	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/002095/" target="_blank">生意宝</a>
+	                                <span class="lhb-zdf c-rise">10.00%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/000920/" target="_blank">南方汇通</a>
+	                                <span class="lhb-zdf c-rise">9.97%</span>
+	                            </td>
+                            																	                            <td>
+	                                <a href="http://data.10jqka.com.cn/market/longhu/code/300172/" target="_blank">中电环保</a>
+	                                <span class="lhb-zdf c-rise">7.95%</span>
+	                            </td>
+                            																</tbody>
+								</table>
+								</div>
+								</td>
+								</tr>
+           </tbody>
+		   </table>
+        </div>
+    </div>
+    <!-- 领涨个股 -->
+        <div class="home-col">
+        <div class="home-hd">
+            <h2 class="icon-lzgg"><a href="http://data.10jqka.com.cn/market/zdfph/" target="_blank">领涨个股</a></h2>
+            <a href="http://data.10jqka.com.cn/market/zdfph/" target="_blank" class="more">个股排行榜</a>
+        </div>
+        <div class="home-bd">
+            <table>
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>股票代码</th>
+                    <th>股票简称</th>
+                    <th>涨跌幅</th>
+                    <th>所属概念</th>
+                </tr>
+                </thead>
+                <tbody>
+                                <tr >
+                    <td>1</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300967/" target="_blank" class="stockCode">300967</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300967/" target="_blank">晓鸣股份</a></td>
+                    <td class="c-rise">581.72 %</td>
+                    <td class="tl">融资融券，新股与次新股，养鸡，注册制次新股</td>
+                </tr>
+                                <tr class="odd">
+                    <td>2</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688315/" target="_blank" class="stockCode">688315</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688315/" target="_blank">诺禾致源</a></td>
+                    <td class="c-rise">114.73 %</td>
+                    <td class="tl">融资融券，新股与次新股，科创次新股</td>
+                </tr>
+                                <tr >
+                    <td>3</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688663/" target="_blank" class="stockCode">688663</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688663/" target="_blank">新风光</a></td>
+                    <td class="c-rise">53.66 %</td>
+                    <td class="tl">融资融券，新股与次新股，科创次新股</td>
+                </tr>
+                                <tr class="odd">
+                    <td>4</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300437/" target="_blank" class="stockCode">300437</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300437/" target="_blank">清水源</a></td>
+                    <td class="c-rise">20.02 %</td>
+                    <td class="tl">污水处理，节能环保，PPP概念，参股新三板，垃圾分类，创业板重组松绑</td>
+                </tr>
+                                <tr >
+                    <td>5</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300942/" target="_blank" class="stockCode">300942</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300942/" target="_blank">易瑞生物</a></td>
+                    <td class="c-rise">20.01 %</td>
+                    <td class="tl">融资融券，食品安全，医疗器械概念，新股与次新股，注册制次新股</td>
+                </tr>
+                                <tr class="odd">
+                    <td>6</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688068/" target="_blank" class="stockCode">688068</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/688068/" target="_blank">热景生物</a></td>
+                    <td class="c-rise">20.01 %</td>
+                    <td class="tl">融资融券，食品安全，医疗器械概念，流感，新冠检测</td>
+                </tr>
+                                <tr >
+                    <td>7</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300094/" target="_blank" class="stockCode">300094</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300094/" target="_blank">国联水产</a></td>
+                    <td class="c-rise">20.00 %</td>
+                    <td class="tl">电子商务，新零售，网红经济</td>
+                </tr>
+                                <tr class="odd">
+                    <td>8</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300334/" target="_blank" class="stockCode">300334</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300334/" target="_blank">津膜科技</a></td>
+                    <td class="c-rise">13.30 %</td>
+                    <td class="tl">污水处理，京津冀一体化，节能环保，PPP概念，股权转让，雄安新区，垃圾分类，创业板重组松绑</td>
+                </tr>
+                                </tbody>
+            </table>
+        </div>
+    </div>
+        <!-- 业绩预告 -->
+        <div class="home-col">
+        <div class="home-hd">
+            <h2 class="icon-yjyg_index"><a href="http://data.10jqka.com.cn/financial/yjyg/" target="_blank">业绩预告</a></h2>
+            <a href="http://data.10jqka.com.cn/financial/yjyg/" target="_blank" class="more">更多</a>
+        </div>
+        <div class="home-bd">
+            <div class="yjyg-tips">
+                <span>业绩大幅上升：<em>491</em>家</span>
+                <span>业绩预盈：<em>9</em>家</span>
+                <span>业绩大幅下降：<em>23</em>家</span>
+            </div>
+            <table>
+                <thead>
+                <tr>
+                    <th width="5%">序号</th>
+                    <th width="8%">股票代码</th>
+                    <th width="8%">股票简称</th>
+                    <th width="10%">预告类型</th>
+                    <th width="39%">业绩预告摘要</th>
+                    <th width="10%">净利润变动幅度</th>
+                    <th width="10%">公告日期</th>
+                    <th width="10%">报表日期</th>
+                </tr>
+                </thead>
+                <tbody>
+                                <tr >
+                    <td>1</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000014/" target="_blank" class="stockCode">000014</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000014/" target="_blank">沙河股份</a></td>
+                    <td class="c-fall">业绩预亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润-1000万元至-900万元&queryarea=all" target="_blank">净利润-1000万元至-900万元</a></td>
+                    <td class="c-fall">-228.87%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>2</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000025/" target="_blank" class="stockCode">000025</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000025/" target="_blank">特力A</a></td>
+                    <td class="c-rise">业绩大幅上升</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润1900万元至2450万元,增长幅度为264.68%至370.25%&queryarea=all" target="_blank">净利润1900万元至2450万元,增长幅度为264.68%至370.25%</a></td>
+                    <td class="c-rise">370.25%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>3</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000029/" target="_blank" class="stockCode">000029</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000029/" target="_blank">深深房A</a></td>
+                    <td class="c-rise">业绩大幅上升</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润7000万元至9000万元,增长幅度为149.33%至220.56%&queryarea=all" target="_blank">净利润7000万元至9000万元,增长幅度为149.33%至220.56%</a></td>
+                    <td class="c-rise">220.56%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>4</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000036/" target="_blank" class="stockCode">000036</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000036/" target="_blank">华联控股</a></td>
+                    <td class="c-fall">业绩大幅下降</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润10000万元至12000万元,下降幅度为67.81%至61.37%&queryarea=all" target="_blank">净利润10000万元至12000万元,下降幅度为67.81%至61.37%</a></td>
+                    <td class="c-fall">-67.81%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>5</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000042/" target="_blank" class="stockCode">000042</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000042/" target="_blank">中洲控股</a></td>
+                    <td class="c-fall">预计增亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润-15013.57万元至-10509.50万元,下降幅度为100.57%至40.4%&queryarea=all" target="_blank">净利润-15013.57万元至-10509.50万元,下降幅度为100.57%至40.4%</a></td>
+                    <td class="c-fall">-100.57%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>6</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000059/" target="_blank" class="stockCode">000059</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000059/" target="_blank">华锦股份</a></td>
+                    <td class="c-rise">预计扭亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润50000万元至55000万元,增长幅度为156.33%至161.97%&queryarea=all" target="_blank">净利润50000万元至55000万元,增长幅度为156.33%至161.97%</a></td>
+                    <td class="c-rise">161.97%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>7</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000401/" target="_blank" class="stockCode">000401</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000401/" target="_blank">冀东水泥</a></td>
+                    <td class="c-rise">预计减亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润-6000万元至-4000万元,增长幅度为78.65%至85.76%&queryarea=all" target="_blank">净利润-6000万元至-4000万元,增长幅度为78.65%至85.76%</a></td>
+                    <td class="c-rise">85.76%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>8</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000429/" target="_blank" class="stockCode">000429</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000429/" target="_blank">粤高速A</a></td>
+                    <td class="c-rise">预计扭亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润37141.91万元至41051.59万元&queryarea=all" target="_blank">净利润37141.91万元至41051.59万元</a></td>
+                    <td class="c-rise">723.97%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>9</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000503/" target="_blank" class="stockCode">000503</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000503/" target="_blank">国新健康</a></td>
+                    <td class="c-rise">预计减亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润-5626万元左右&queryarea=all" target="_blank">净利润-5626万元左右</a></td>
+                    <td class="c-rise">20.96%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>10</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000504/" target="_blank" class="stockCode">000504</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000504/" target="_blank">ST生物</a></td>
+                    <td class="c-rise">预计扭亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润80.00万元至110.0万元&queryarea=all" target="_blank">净利润80.00万元至110.0万元</a></td>
+                    <td class="c-rise">168.75%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>11</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000517/" target="_blank" class="stockCode">000517</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000517/" target="_blank">荣安地产</a></td>
+                    <td class="c-rise">业绩大幅上升</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润13600.0万元至17600.0万元,增长幅度为590.01%至792.95%&queryarea=all" target="_blank">净利润13600.0万元至17600.0万元,增长幅度为590.01%至792.95%</a></td>
+                    <td class="c-rise">792.95%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>12</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000539/" target="_blank" class="stockCode">000539</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000539/" target="_blank">粤电力A</a></td>
+                    <td class="c-fall">业绩预亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润-5500万元至-4000万元&queryarea=all" target="_blank">净利润-5500万元至-4000万元</a></td>
+                    <td class="c-fall">-846.27%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>13</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000551/" target="_blank" class="stockCode">000551</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000551/" target="_blank">创元科技</a></td>
+                    <td class="c-rise">业绩大幅上升</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润2999.33万元至3713.45万元,增长幅度为110%至160%&queryarea=all" target="_blank">净利润2999.33万元至3713.45万元,增长幅度为110%至160%</a></td>
+                    <td class="c-rise">160.00%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>14</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000557/" target="_blank" class="stockCode">000557</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000557/" target="_blank">西部创业</a></td>
+                    <td class="c-rise">业绩预增</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润5916万元左右,增长幅度为26.47%左右&queryarea=all" target="_blank">净利润5916万元左右,增长幅度为26.47%左右</a></td>
+                    <td class="c-rise">26.47%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>15</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000573/" target="_blank" class="stockCode">000573</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000573/" target="_blank">粤宏远A</a></td>
+                    <td class="c-rise">预计扭亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润6000万元至7500万元,增长幅度为1109.01%至1361.27%&queryarea=all" target="_blank">净利润6000万元至7500万元,增长幅度为1109.01%至1361.27%</a></td>
+                    <td class="c-rise">1361.27%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>16</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000591/" target="_blank" class="stockCode">000591</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000591/" target="_blank">太阳能</a></td>
+                    <td class="c-rise">业绩大幅上升</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润25000万元至30000万元,增长幅度为61.65%至93.98%&queryarea=all" target="_blank">净利润25000万元至30000万元,增长幅度为61.65%至93.98%</a></td>
+                    <td class="c-rise">93.98%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>17</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000597/" target="_blank" class="stockCode">000597</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000597/" target="_blank">东北制药</a></td>
+                    <td class="c-rise">预计扭亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润3600万元至4000万元,增长幅度为283.02%至303.35%&queryarea=all" target="_blank">净利润3600万元至4000万元,增长幅度为283.02%至303.35%</a></td>
+                    <td class="c-rise">303.35%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>18</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000611/" target="_blank" class="stockCode">000611</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000611/" target="_blank">ST天首</a></td>
+                    <td class="c-fall">预计增亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润-600万元左右,下降幅度为8.74%左右&queryarea=all" target="_blank">净利润-600万元左右,下降幅度为8.74%左右</a></td>
+                    <td class="c-fall">-8.74%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr >
+                    <td>19</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000613/" target="_blank" class="stockCode">000613</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000613/" target="_blank">大东海A</a></td>
+                    <td class="c-rise">预计扭亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润95万元至115万元,增长幅度为138.15%至146.18%&queryarea=all" target="_blank">净利润95万元至115万元,增长幅度为138.15%至146.18%</a></td>
+                    <td class="c-rise">146.18%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                <tr class="odd">
+                    <td>20</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000622/" target="_blank" class="stockCode">000622</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000622/" target="_blank">恒立实业</a></td>
+                    <td class="c-rise">预计减亏</td>
+                    <td><a href="http://www.iwencai.com/stockpick/search?preParams=&ts=1&f=1&qs=msg_pubnote_ths_data&querytype=&tid=stockpick&w=净利润-120万元至-85万元,增长幅度为0.07%至29.21%&queryarea=all" target="_blank">净利润-120万元至-85万元,增长幅度为0.07%至29.21%</a></td>
+                    <td class="c-rise">29.21%</td>
+                    <td>2021-04-14</td>
+                    <td>2021-03-31</td>
+                </tr>
+                                </tbody>
+            </table>
+        </div>
+    </div>
+        <!-- 个股资金流 -->
+        <div class="home-col">
+        <div class="home-hd">
+            <h2 class="icon-ggzjl"><a href="http://data.10jqka.com.cn/funds/ggzjl/" target="_blank">个股资金流</a></h2>
+            <a href="http://data.10jqka.com.cn/funds/ggzjl/" target="_blank" class="more">更多</a>
+        </div>
+        <div class="home-bd">
+            <table>
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>股票代码</th>
+                    <th>股票简称</th>
+                    <th>最新价</th>
+                    <th>涨跌幅</th>
+                    <th>换手率</th>
+                    <th>流入资金(万)</th>
+                    <th>流出资金(万)</th>
+                    <th>净额(万)</th>
+                    <th>成交额(万)</th>
+                    <th>占总成交比</th>
+                    <th>大单流入(万)</th>
+                </tr>
+                </thead>
+                <tbody>
+                                <tr >
+                    <td>1</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/601888/funds/" target="_blank" class="stockCode">601888</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/601888/funds/" target="_blank">中国中免</a></td>
+                    <td class="c-fall">265.85</td>
+                    <td class="c-fall">-10.00%</td>
+                    <td>1.21%</td>
+                    <td class="c-rise">390394.73</td>
+                    <td class="c-fall">264999.41</td>
+                    <td class="c-rise">125395.31</td>
+                    <td>655386.00</td>
+                    <td>19.13%</td>
+                    <td class="c-rise">137119.00</td>
+                </tr>
+                                <tr class="odd">
+                    <td>2</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/002241/funds/" target="_blank" class="stockCode">002241</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/002241/funds/" target="_blank">歌尔股份</a></td>
+                    <td class="c-rise">29.66</td>
+                    <td class="c-rise">8.21%</td>
+                    <td>3.98%</td>
+                    <td class="c-rise">227124.11</td>
+                    <td class="c-fall">119986.31</td>
+                    <td class="c-rise">107137.80</td>
+                    <td>347107.00</td>
+                    <td>30.87%</td>
+                    <td class="c-rise">48598.80</td>
+                </tr>
+                                <tr >
+                    <td>3</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300142/funds/" target="_blank" class="stockCode">300142</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/300142/funds/" target="_blank">沃森生物</a></td>
+                    <td class="c-rise">47.95</td>
+                    <td class="c-rise">9.50%</td>
+                    <td>5.14%</td>
+                    <td class="c-rise">219885.62</td>
+                    <td class="c-fall">140965.54</td>
+                    <td class="c-rise">78920.08</td>
+                    <td>360855.00</td>
+                    <td>21.87%</td>
+                    <td class="c-rise">82999.60</td>
+                </tr>
+                 
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <!-- 大宗交易 -->
+        <div class="home-col">
+        <div class="home-hd">
+            <h2 class="icon-dzjy"><a href="http://data.10jqka.com.cn/market/dzjy/" target="_blank">大宗交易</a></h2>
+            <a href="http://data.10jqka.com.cn/market/dzjy/" target="_blank" class="more">更多</a>
+        </div>
+        <div class="home-bd">
+            <table>
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th width="110">交易日期</th>
+                    <th>股票代码</th>
+                    <th width="90">股票简称</th>
+                    <th>收盘价</th>
+                    <th>成交价格</th>
+                    <th width="120">成交量(万股)</th>
+                    <th>溢价率</th>
+                    <th>买方营业部</th>
+                    <th>卖方营业部</th>
+                </tr>
+                </thead>
+                <tbody>
+                                <tr >
+                    <td>1</td>
+                    <td>2021-04-13</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000596/" target="_blank" class="stockCode">000596</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000596/" target="_blank">古井贡酒</a></td>
+                    <td>226.39</td>
+                    <td>230.00</td>
+                    <td>5.20</td>
+                    <td class="tr c-rise">1.59%</td>
+                    <td class="tl">广发证券股份有限公司厦门环岛东路证券营业部                    </td>
+                    <td class="tl">中国银河证券股份有限公司厦门民族路证券营业部</td>
+                </tr>
+                                <tr class="odd">
+                    <td>2</td>
+                    <td>2021-04-13</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000596/" target="_blank" class="stockCode">000596</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000596/" target="_blank">古井贡酒</a></td>
+                    <td>226.39</td>
+                    <td>230.00</td>
+                    <td>8.00</td>
+                    <td class="tr c-rise">1.59%</td>
+                    <td class="tl">广发证券股份有限公司厦门环岛东路证券营业部                    </td>
+                    <td class="tl">中国银河证券股份有限公司厦门民族路证券营业部</td>
+                </tr>
+                                <tr >
+                    <td>3</td>
+                    <td>2021-04-13</td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000651/" target="_blank" class="stockCode">000651</a></td>
+                    <td class="linkToGghq"><a href="http://stockpage.10jqka.com.cn/000651/" target="_blank">格力电器</a></td>
+                    <td>59.17</td>
+                    <td>59.17</td>
+                    <td>670.00</td>
+                    <td class="tr ">0.00%</td>
+                    <td class="tl">机构专用<a href="http://www.iwencai.com/regression/result-normal?qs=backtest_datadzjy&query=%E5%A4%A7%E5%AE%97%E4%BA%A4%E6%98%93%E4%B9%B0%E6%96%B9%E8%90%A5%E4%B8%9A%E9%83%A8%E5%8C%85%E5%90%AB%E6%9C%BA%E6%9E%84%E4%B8%93%E7%94%A8%3B%E5%A4%A7%E5%AE%97%E4%BA%A4%E6%98%93%E6%BA%A2%E4%BB%B7%E7%8E%87%E7%AD%89%E4%BA%8E0&startDate=20190412&endDate=20210412&daysForSaleStrategy=1,3,5,8,10,15,20,25,30" 
+                      target="_blank" title="次日上涨概率为48.28%， 平均盈利为0.10%。收益率最高是持股30日后卖出，收益率为3.14%，成功率为52.76%。" class="m-ques-icon wcdzjy">&nbsp;</a>                    </td>
+                    <td class="tl">机构专用</td>
+                </tr>
+                                </tbody>
+            </table>
+        </div>
+    </div>
+        <!-- 融资融券 -->
+        <div class="home-col home-rzrq">
+        <div class="home-hd">
+            <h2 class="icon-rzrq"><a href="http://data.10jqka.com.cn/market/rzrq/" target="_blank">融资融券</a></h2>
+            <a href="http://data.10jqka.com.cn/market/rzrq/" target="_blank" class="more">更多</a>
+        </div>
+        <div class="home-bd">
+            <table>
+                <thead>
+                <tr class="trow1">
+                    <th rowspan="2">序号</th>
+                    <th rowspan="2">股票代码</th>
+                    <th rowspan="2">股票简称</th>
+                    <th colspan="3" class="bg">融资(万元)</th>
+                    <th colspan="3" class="bg">融券(万元)</th>
+                    <th rowspan="2">融资融券余额(万元)</th>
+                    <th rowspan="2">历史</th>
+                </tr>
+                <tr class="trow2">
+                    <th>余额</th>
+                    <th>买入额</th>
+                    <th>偿还额</th>
+                    <th>余量</th>
+                    <th>卖出量</th>
+                    <th>偿还量</th>
+                </tr>
+                </thead>
+                <tbody>
+                                <tr >
+                    <td>1</td>
+                    <td class="linkToGghq"><a href="http://data.10jqka.com.cn/market/rzrqgg/code/603259/" target="_blank" class="stockCode">603259</a></td>
+                    <td class="linkToGghq"><a href="http://data.10jqka.com.cn/market/rzrqgg/code/603259/" target="_blank">药明康德</a></td>
+                    <td>317708.88</td>
+                    <td>65423.75</td>
+                    <td>15071.72</td>
+                    <td>115.56</td>
+                    <td>8.00</td>
+                    <td>14.27</td>
+                    <td class="c-rise">333046.40</td>
+                    <td><a href="http://data.10jqka.com.cn/market/rzrqgg/code/603259/" target="_blank">详情</a></td>
+                </tr>
+                                <tr >
+                    <td>2</td>
+                    <td class="linkToGghq"><a href="http://data.10jqka.com.cn/market/rzrqgg/code/002493/" target="_blank" class="stockCode">002493</a></td>
+                    <td class="linkToGghq"><a href="http://data.10jqka.com.cn/market/rzrqgg/code/002493/" target="_blank">荣盛石化</a></td>
+                    <td>163296.35</td>
+                    <td>56073.61</td>
+                    <td>8222.39</td>
+                    <td>125.99</td>
+                    <td>5.82</td>
+                    <td>150.77</td>
+                    <td class="c-rise">166616.08</td>
+                    <td><a href="http://data.10jqka.com.cn/market/rzrqgg/code/002493/" target="_blank">详情</a></td>
+                </tr>
+                                <tr >
+                    <td>3</td>
+                    <td class="linkToGghq"><a href="http://data.10jqka.com.cn/market/rzrqgg/code/002352/" target="_blank" class="stockCode">002352</a></td>
+                    <td class="linkToGghq"><a href="http://data.10jqka.com.cn/market/rzrqgg/code/002352/" target="_blank">顺丰控股</a></td>
+                    <td>234611.12</td>
+                    <td>77929.02</td>
+                    <td>37574.69</td>
+                    <td>754.66</td>
+                    <td>22.40</td>
+                    <td>1.05</td>
+                    <td class="c-rise">284343.45</td>
+                    <td><a href="http://data.10jqka.com.cn/market/rzrqgg/code/002352/" target="_blank">详情</a></td>
+                </tr>
+                                </tbody>
+            </table>
+        </div>
+    </div>
+    	<!--
+    <div class="home-map">
+        <h2>数据中心 · 地图</h2>
+        <div class="map-main clearfix">
+            <dl>
+                <dt><a href="##" target="_blank">市场交易</a></dt>
+                <dd><a href="http://data.10jqka.com.cn/market/longhu/" target="_blank">龙虎榜单</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/xsjj/" target="_blank">限售解禁</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/dzjy/" target="_blank">大宗交易</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/rzrq/" target="_blank">融资融券</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/ggsd/" target="_blank">公告速递</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/ggsyl/" target="_blank">个股市盈率</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/ahgbj/" target="_blank">AH股比价</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/abgbj/" target="_blank">AB股比价</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/market/zdfph/" target="_blank">涨跌幅榜</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="http://data.10jqka.com.cn/funds/ggzjl/" target="_blank">资金流向</a></dt>
+                <dd><a href="http://data.10jqka.com.cn/funds/ddzz/" target="_blank">大单追踪</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/funds/ggzjl/" target="_blank">个股资金</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/funds/gnzjl/" target="_blank">概念资金</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/funds/hyzjl/" target="_blank">行业资金</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="http://data.10jqka.com.cn/rank/cxg/" target="_blank">数据排行</a></dt>
+                <dd><a href="http://data.10jqka.com.cn/rank/cxg/" target="_blank">创新高</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/cxd/" target="_blank">创新低</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/lxsz/" target="_blank">连续上涨</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/lxxd/" target="_blank">连续下跌</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/cxfl/" target="_blank">持续放量</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/cxsl/" target="_blank">持续缩量</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/xstp/" target="_blank">向上突破</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/xxtp/" target="_blank">向下突破</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/ljqs/" target="_blank">量价齐升</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/rank/ljqd/" target="_blank">量价齐跌</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="http://data.10jqka.com.cn/financial/yjyg/" target="_blank">财务数据</a></dt>
+                <dd><a href="http://data.10jqka.com.cn/financial/ggjy/" target="_blank">高管持股</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/financial/yjyg/" target="_blank">业绩预告</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/financial/yjgg/" target="_blank">业绩公告</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/financial/yjkb/" target="_blank">业绩快报</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/financial/yypl/" target="_blank">业绩披露时间</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/financial/sgpx/" target="_blank">送股派息</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="http://data.10jqka.com.cn/gzqh/" target="_blank">其他</a></dt>
+                <dd><a href="http://data.10jqka.com.cn/gzqh/" target="_blank">股指期货</a></dd>
+                <dd><a href="http://data.10jqka.com.cn/souniu/" target="_blank">I问财选股</a></dd>
+                <dd><a href="http://q.10jqka.com.cn/qqsc/" target="_blank">全球市场</a></dd>
+                <dd><a href="http://q.10jqka.com.cn/stock/fl/" target="_blank">A股涨幅</a></dd>
+                <dd><a href="http://q.10jqka.com.cn/stock/fl/hsa/zdf/1_asc.html" target="_blank">A股跌幅</a></dd>
+            </dl>
+        </div>
+    </div>
+	-->
+</div>
+</div>
+<script type="text/javascript">document.write(footerCls)</script>    
+<p>
+        <a href="http://news.10jqka.com.cn/tzz/" rel="nofollow">投资者关系</a><span class="ff">|</span>
+        <a href="http://news.10jqka.com.cn/c/20100105/61833421.shtml" rel="nofollow">关于同花顺</a><span>|</span>
+        <a href="http://download.10jqka.com.cn/">股票软件</a><span>|</span>
+        <a href="http://www.10jqka.com.cn/ia/pass_buck.php" rel="nofollow">法律声明</a><span>|</span>
+        <a href="http://www.10jqka.com.cn/hexin_license.htm" rel="nofollow">运营许可</a><span>|</span>
+        <a href="http://www.10jqka.com.cn/modules.php?name=what&amp;page=cooperate" rel="nofollow">内容合作</a><span>|</span>
+        <a href="http://www.10jqka.com.cn/hexin_contact.htm" rel="nofollow">联系我们</a><span>|</span>
+        <a href="http://news.10jqka.com.cn/list/link.shtml" rel="nofollow">友情链接</a><span>|</span>
+        <!--<a href="http://news.10jqka.com.cn/msg/" rel="nofollow">网友意见箱</a><span>|</span>-->
+        <a href="http://job.10jqka.com.cn/" rel="nofollow">招聘英才</a>
+    </p>
+	<p class="c333">免责声明:本信息由同花顺金融研究中心提供，仅供参考，同花顺金融研究中心力求但不保证数据的完全准确，如有错漏请以中国证监会指定上市公司信息披露媒体为准，</p>
+	<p class="c333">同花顺金融研究中心不对因该资料全部或部分内容而引致的盈亏承担任何责任。用户个人对服务的使用承担风险。同花顺对此不作任何类型的担保。</p>
+    <p class="c333">Copyright Zhejiang Hithink Flush Information Network Co., Ltd. All rights reserved.</p>
+    <p class="c333"> 浙江核新同花顺网络信息股份有限公司版权所有</p>
+</div>
+<script type="text/javascript">document.write(fixCls)</script>    
+     <div class="feedback">
+        <a href="###" title="反馈"></a>
+        <div class="feedback-box" style="display: none;">
+            <div class="hd">提交建议</div>
+            <div class="bd clearfix">
+                <textarea class="txt">如果您想对我们的产品提出意见或建议，请在这里填写，您的建议是同花顺数据进步的动力!</textarea>
+                <input type="text" class="tel" value="留下邮箱/QQ号以便我们回复您。"/>
+                <p><input type="submit" value="发表" class="btn"/></p>
+            </div>
+        </div>
+    </div>
+    <a href="###" title="收藏" class="collect"></a>
+    <a href="#" title="置顶" class="gotop"></a>
+</div>
+<script>
+	
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?60bad21af9c824a4a0530d5dbf4357ca";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?78c58f01938e4d85eaf619eae71b4ed1";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?f79b64788a4e377c608617fba4c736e2";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	
+</script>	<script type="text/javascript" src="//s.thsi.cn/cb?js/;jquery-1.8.3.min.js;/js/navigation/;jquery.bgiframe.min.js;jquery.ui.position.min.js;autocomplete-2.0.2.min.js;default-202008032137.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//s.thsi.cn/cb?js/home/;ths_core.min.js;ths_quote.min.js;ths_index_v3.3.min.js"></script>
+<!--下面六个-->
+<script type="text/javascript" src="//s.thsi.cn/cb?js/;home/v6/weblogin_v3.20170609.js;common/cefapi/1.5.5/cefApi.min.js;datacenter/header-search.js;ucenter/subMenu_v4.js;datacenter/financial/main_v1-6.js;ta.min.20150515.js;;webprivate/client/js/clientJump_v3.js&20191105"></script>
+<script type="text/javascript">
+	var fidId = 'data_sy';
+
+	var statId = 'db123data';
+	if (typeof(fidId)!="undefined" && fidId!=null) {
+		TA.log({id:statId,fid:'info_gather,dbdatacenter,'+fidId});
+	} else {
+		TA.log({id:statId,fid:'info_gather,dbdatacenter'});
+	}
+	
+	$('.wcggsd').click(function(){
+		//问财跳转统计
+		  TA.log({id:'db_56b1bf6a_760',fid:''});
+	});
+	$('.wcdzjy').click(function(){
+		//问财跳转统计
+		  TA.log({id:'db_56b1bfe1_945',fid:''});
+	});
+
+</script>
+</body>
+</html>
